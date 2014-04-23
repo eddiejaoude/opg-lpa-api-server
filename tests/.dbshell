@@ -1,0 +1,37 @@
+show dbs;
+cd opglpa-api
+use opglpa-api
+use opglpa-api
+show collections;
+drop collection application;
+delete application;
+show collections;
+db.application.delete();
+db.application.removeAll()
+db.application.remove()
+show collections;
+db.application.find()
+db.application.find();
+db.application.find()
+db.application.count()
+db.application.count();
+db.application.find()
+db.application.count()
+db.application.find('_id')
+db.application.find({"_id"})
+db.application.find("_id")
+db.application.find({},{"_id"})
+db.application.find({}, {_id:1})
+db.application.count();
+db.application.find({}, {_id:1})
+db.application.remove();
+db.application.find({}, {_id:1})
+show dbs;
+use opglpa-api;
+show collections;
+db.application.find();
+db.application.find({id:});
+db.application.find({}, {id:});
+db.application.find({}, {id:1});
+db.application.find({}, {id:0});
+db.application.find({}, {id:1});

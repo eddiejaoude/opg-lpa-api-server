@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- complex types -->
+
+    <xs:complexType name="applicant-collection">
+        <xs:choice>
+            <xs:element name="donor" minOccurs="0" maxOccurs="1" type="donor"/>
+            <xs:sequence minOccurs="0" maxOccurs='unbounded'>
+	            <xs:element name="attorney" minOccurs="0" maxOccurs="unbounded" type="attorney"/>
+	            <xs:element name="trust-corporation" minOccurs="0" maxOccurs="1" type="trust-corporation"/>
+            </xs:sequence>
+        </xs:choice>
+    </xs:complexType>
+
+    <xs:complexType name="attorney">
+        <xs:all>
+            <xs:element name="title" type="xs:string"/>
+            <xs:element name="name" type="person-name"/>
+            <xs:element name="email-address" type="xs:string"/>
+            <xs:element name="postal-address" type="postal-address"/>
+            <xs:element name="phone-number" type="xs:string"/>
+            <xs:element name="donor-relationship" type="xs:string"/>
+            <xs:element name="date-of-birth" type="date"/>
+            <xs:element name="is-bankrupt-or-subject-to-debt-relief-order" type="yes-or-no"/>
+            <xs:element name="company-name" type="xs:string"/>
+            <xs:element name="occupation" type="xs:string"/>
+            <xs:element name="dx-address" type="dx-address"/>
+        </xs:all>
+    </xs:complexType>
+
+    <xs:complexType name="attorney-collection">
+        <xs:sequence maxOccurs="unbounded">
+            <xs:element name="attorney" minOccurs="0" maxOccurs="unbounded" type="attorney"/>
+            <xs:element name="trust-corporation" minOccurs="0" type="trust-corporation"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="attorney-decision-instructions">
+        <xs:all>
+            <xs:element name="how-attorneys-make-decisions" type="how-attorneys-make-decisions"/>
+            <xs:element name="instructions" type="xs:string"/>
+        </xs:all>
+    </xs:complexType>
+
+    <xs:complexType name="attorney-declaration">
+        <xs:all>
+            <xs:element name="attorney" type="attorney"/>
+            <xs:element name="date-signed" type="date" />
+        </xs:all>
+    </xs:complexType>
+
+    <xs:complexType name="attorney-declaration-collection">
+        <xs:sequence maxOccurs="unbounded">
+            <xs:element name="attorney-declaration" minOccurs="0" maxOccurs="unbounded" type="attorney-declaration"/>
+            <xs:element name="trust-corporation-declaration" minOccurs="0" maxOccurs="unbounded" type="trust-corporation-declaration"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="certificate-provider">
+        <xs:all>
+            <xs:element name="title" type="xs:string"/>
+            <xs:element name="name" type="person-name"/>
+            <xs:element name="email-address" type="xs:string"/>
+            <xs:element name="postal-address" type="postal-address"/>
+            <xs:element name="qualification" type="certificate-provider-qualification"/>
+        </xs:all>
+    </xs:complexType>
+
+    <xs:complexType name="certificate-provider-collection">
+        <xs:sequence>
+            <xs:element name="certificate-provider" minOccurs="0" maxOccurs="unbounded" type="certificate-provider"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="certificate-provider-declaration">
+        <xs:all>
+            <xs:element name="certificate-provider" type="certificate-provider"/>
+            <xs:element name="date-signed" type="date"/>
+        </xs:all>
+    </xs:complexType>
+
+    <xs:complexType name="certificate-provider-declaration-collection">
+        <xs:sequence>
+            <xs:element name="certificate-provider-declaration" minOccurs="0" maxOccurs="unbounded" type="certificate-provider-declaration"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="certificate-provider-qualification">
+        <xs:all>
+            <xs:element name="qualification" type="certificate-provider-qualification-type"/>
+            <xs:element name="qualification-details" type="xs:string"/>
+        </xs:all>
+    </xs:complexType>
+
+    <xs:complexType name="correspondent">
+        <xs:all>
+            <xs:element name="title" type="xs:string"/>
+            <xs:element name="name" type="person-name"/>
+            <xs:element name="email-address" type="xs:string"/>
+            <xs:element name="postal-address" type="postal-address"/>
+            <xs:element name="phone-number" type="xs:string"/>
+            <xs:element name="company-name" type="xs:string"/>
+            <xs:element name="company-reference" type="xs:string"/>
+            <xs:element name="dx-address" type="dx-address"/>
+        </xs:all>
+    </xs:complexType>
+
+    <xs:complexType name="donor">
+        <xs:all>
+            <xs:element name="title" type="xs:string"/>
+            <xs:element name="name" type="person-name"/>
+            <xs:element name="email-address" type="xs:string"/>
+            <xs:element name="postal-address" type="postal-address"/>
+            <xs:element name="phone-number" type="xs:string"/>
+            <xs:element name="alias" type="xs:string"/>
+            <xs:element name="date-of-birth" type="date"/>
+            <xs:element name="has-ability-to-sign" type="yes-or-no"/>
+        </xs:all>
+    </xs:complexType>
+
+    <xs:complexType name="donor-declaration">
+        <xs:all>
+            <xs:element name="donor" type="donor"/>
+            <xs:element name="date-signed" type="date"/>
+        </xs:all>
+    </xs:complexType>
+
+    <xs:complexType name="donor-discount-claim">
+        <xs:all>
+            <xs:element name="is-applying-for-discount" type="yes-or-no"/>
+            <xs:element name="is-damage-award-recipient" type="yes-or-no"/>
+            <xs:element name="is-earning-low-income" type="yes-or-no"/>
+            <xs:element name="is-receiving-benefits" type="yes-or-no"/>
+        </xs:all>
+    </xs:complexType>
+
+    <xs:complexType name="dx-address">
+        <xs:all>
+            <xs:element name="dx-number" type="xs:string"/>
+            <xs:element name="dx-exchange" type="xs:string"/>
+        </xs:all>
+    </xs:complexType>
+
+    <xs:complexType name="notification">
+        <xs:all>
+            <xs:element name="notified-person" type="notified-person"/>
+            <xs:element name="date-sent" type="date"/>
+        </xs:all>
+    </xs:complexType>
+
+    <xs:complexType name="notification-collection">
+        <xs:sequence>
+            <xs:element name="notification" minOccurs="0" maxOccurs="unbounded" type="notification"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="notified-person">
+        <xs:all>
+            <xs:element name="title" type="xs:string"/>
+            <xs:element name="name" type="person-name"/>
+            <xs:element name="email-address" type="xs:string"/>
+            <xs:element name="postal-address" type="postal-address"/>
+            <xs:element name="phone-number" type="xs:string"/>
+        </xs:all>
+    </xs:complexType>
+
+    <xs:complexType name="notified-person-collection">
+        <xs:sequence>
+            <xs:element name="notified-person" minOccurs="0" maxOccurs="unbounded" type="notified-person"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="payment-instructions">
+        <xs:all>
+            <xs:element name="payment-method" type="xs:string"/>
+            <xs:element name="instructions" type="xs:string"/>
+        </xs:all>
+    </xs:complexType>
+
+    <xs:complexType name="online-payment">
+        <xs:all>
+            <xs:element name="opg-payment-ref" type="xs:string"/>
+            <xs:element name="worldpay-ref" type="xs:string"/>
+        </xs:all>
+    </xs:complexType>
+
+    <xs:complexType name="person-name">
+        <xs:all>
+            <xs:element name="forename" type="xs:string"/>
+            <xs:element name="middlenames" type="xs:string"/>
+            <xs:element name="surname" type="xs:string"/>
+        </xs:all>
+    </xs:complexType>
+
+    <xs:complexType name="postal-address">
+        <xs:all>
+            <xs:element name="address-line-1" type="xs:string"/>
+            <xs:element name="address-line-2" type="xs:string"/>
+            <xs:element name="address-line-3" type="xs:string"/>
+            <xs:element name="town" type="xs:string"/>
+            <xs:element name="county" type="xs:string"/>
+            <xs:element name="postcode" type="xs:string"/>
+            <xs:element name="country" type="xs:string"/>
+        </xs:all>
+    </xs:complexType>
+
+    <xs:complexType name="previous-donor-application">
+        <xs:all>
+            <xs:element name="has-applied-previously" type="yes-or-no"/>
+            <xs:element name="previous-application-details" type="xs:string"/>
+        </xs:all>
+    </xs:complexType>
+
+    <xs:complexType name="replacement-attorney-decision-instructions">
+        <xs:all>
+            <xs:element name="how-attorneys-are-replaced" type="xs:string"/>
+            <xs:element name="how-attorneys-make-decisions" type="xs:string"/>
+            <xs:element name="instructions" type="xs:string"/>
+        </xs:all>
+    </xs:complexType>
+
+    <xs:complexType name="trust-corporation">
+        <xs:all>
+            <xs:element name="company-name" type="xs:string"/>
+            <xs:element name="company-number" type="xs:string"/>
+            <xs:element name="authorised-person-name" type="person-name"/>
+            <xs:element name="postal-address" type="postal-address"/>
+            <xs:element name="dx-address" type="dx-address"/>
+            <xs:element name="email-address" type="xs:string"/>
+            <xs:element name="phone-number" type="xs:string"/>
+        </xs:all>
+    </xs:complexType>
+
+    <xs:complexType name="trust-corporation-declaration">
+        <xs:all>
+            <xs:element name="trust-corporation" type="trust-corporation"/>
+            <xs:element name="date-signed" type="date"/>
+        </xs:all>
+    </xs:complexType>
+
+    <!-- simple types -->
+    
+    <xs:simpleType name="certificate-provider-qualification-type">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value=""/>
+            <xs:enumeration value="ThemToComplete"/>
+            <xs:enumeration value="KnewDonorOver2Years"/>
+            <xs:enumeration value="HaveProfessionalSkills"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="how-attorneys-make-decisions">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value=""/>
+            <xs:enumeration value="Jointly"/>
+            <xs:enumeration value="JointlyAndSeverally"/>
+            <xs:enumeration value="ItDepends"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="date">
+        <xs:union memberTypes="xs:date">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value=""/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:union>
+    </xs:simpleType>
+
+    <xs:simpleType name="yes-or-no">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value=""/>
+            <xs:enumeration value="yes"/>
+            <xs:enumeration value="no"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>

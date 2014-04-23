@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="api" default="build">
+
+    <target name="build" depends="prepare,lint,restart-apache,phpunit,phploc,pdepend,phpmd-ci,phpcs-ci,phpcpd,phpcb"/>
+
+    <target name="clean">
+        <delete dir="${basedir}/build/api"/>
+        <delete dir="${basedir}/build/code-browser"/>
+        <delete dir="${basedir}/build/coverage"/>
+        <delete dir="${basedir}/build/logs"/>
+        <delete dir="${basedir}/build/pdepend"/>
+        <delete dir="${basedir}/data/cache"/>
+    </target>
+
+    <target name="prepare" depends="clean">
+        <mkdir dir="${basedir}/build/api"/>
+        <mkdir dir="${basedir}/build/code-browser"/>
+        <mkdir dir="${basedir}/build/coverage"/>
+        <mkdir dir="${basedir}/build/logs"/>
+        <mkdir dir="${basedir}/build/pdepend"/>
+        <mkdir dir="${basedir}/data/cache"/>
+    </target>
+
+    <target name="lint">
+        <apply executable="php" failonerror="true">
+            <arg value="-l" />
+            <fileset dir="${basedir}/module">
+                <include name="**/*.php" />
+                <modified />
+            </fileset>
+            <fileset dir="${basedir}/tests">
+                <include name="**/*.php" />
+                <modified />
+            </fileset>
+        </apply>
+    </target>
+
+    <target name="restart-apache">
+        <exec executable="/usr/bin/sudo">
+            <arg line="/etc/init.d/apache2 graceful" />
+        </exec>
+    </target>
+
+    <target name="phpunit">
+        <exec executable="phpunit" failonerror="true">
+            <arg line="--configuration '${basedir}/tests/phpunit.xml'
+               --log-junit '${basedir}/build/logs/junit.xml'
+               --coverage-clover '${basedir}/build/logs/clover.xml'
+               --coverage-html '${basedir}/build/logs/'" />
+        </exec>
+    </target>
+
+    <target name="pdepend">
+        <exec executable="pdepend" failonerror="false">
+            <arg line="--bad-documentation
+              --jdepend-xml='${basedir}/build/logs/jdepend.xml'
+              --jdepend-chart='${basedir}/build/pdepend/dependencies.svg'
+              --overview-pyramid='${basedir}/build/pdepend/overview-pyramid.svg'
+              --ignore='./vendor'
+              '${basedir}/module/Opg'" />
+        </exec>
+    </target>
+
+    <target name="phploc">
+        <exec executable="phploc" failonerror="false">
+            <arg line="--log-csv '${basedir}/build/logs/phploc.csv'
+              '${basedir}/module/Opg'" />
+        </exec>
+    </target>
+
+    <target name="phpmd">
+        <exec executable="phpmd" failonerror="false">
+            <arg line="'${basedir}/module/Opg'
+              text
+              '${basedir}/phpmd.xml'" />
+        </exec>
+    </target>
+
+    <target name="phpmd-ci">
+        <exec executable="phpmd" failonerror="false" output="/dev/null">
+            <arg line="'${basedir}/module/Opg'
+              xml
+              '${basedir}/phpmd.xml'
+              --reportfile
+              '${basedir}/build/logs/pmd.xml'" />
+        </exec>
+    </target>
+
+    <target name="phpcs">
+        <exec executable="phpcs" failonerror="false">
+            <arg line="--standard='${basedir}/phpcs.xml'
+              '${basedir}/module/Opg'" />
+        </exec>
+    </target>
+
+    <target name="phpcs-ci">
+        <exec executable="phpcs" failonerror="false" output="/dev/null">
+            <arg line="--report=checkstyle
+              --report-file='${basedir}/build/logs/checkstyle.xml'
+              --standard='${basedir}/phpcs.xml'
+              '${basedir}/module/Opg'" />
+        </exec>
+    </target>
+
+    <target name="phpcpd">
+        <exec executable="phpcpd" failonerror="false">
+            <arg line="--log-pmd '${basedir}/build/logs/pmd-cpd.xml'
+              --exclude 'src/Opg/Model/Element'
+              '${basedir}/module/Opg'" />
+        </exec>
+    </target>
+
+    <target name="phpcb">
+        <exec executable="phpcb" failonerror="false">
+            <arg line="--log '${basedir}/build/logs'
+                 --output '${basedir}/build/code-browser'
+                 --source '${basedir}/module'" />
+        </exec>
+    </target>
+
+</project>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:include schemaLocation="Elements.xsd"/>
+
+    <xs:complexType name="health-welfare-application">
+        <xs:all>
+            <xs:element name="donor" type="donor"/>
+            <xs:element name="attorneys" type="attorney-collection"/>
+            <xs:element name="attorney-decision-instructions" type="attorney-decision-instructions"/>
+            <xs:element name="replacement-attorneys" type="attorney-collection"/>
+            <xs:element name="replacement-attorney-decision-instructions" type="replacement-attorney-decision-instructions"/>
+            <xs:element name="certificate-providers" type="certificate-provider-collection"/>
+            <xs:element name="persons-to-be-notified" type="notified-person-collection"/>
+            <xs:element name="charges" type="xs:string"/>
+            <xs:element name="guidance" type="xs:string"/>
+            <xs:element name="restrictions" type="xs:string"/>
+            <xs:element name="is-giving-life-sustaining-authority" type="yes-or-no"/>
+        </xs:all>
+    </xs:complexType>
+
+    <xs:element name="application" type="health-welfare-application"/>
+
+</xs:schema>

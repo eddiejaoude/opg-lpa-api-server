@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<application>
+    <donor>
+        <title></title>
+        <name>
+            <forename></forename>
+            <middlenames></middlenames>
+            <surname></surname>
+        </name>
+        <email-address></email-address>
+        <postal-address>
+            <address-line-1></address-line-1>
+            <address-line-2></address-line-2>
+            <address-line-3></address-line-3>
+            <town></town>
+            <county></county>
+            <postcode></postcode>
+            <country></country>
+        </postal-address>
+        <phone-number></phone-number>
+        <alias></alias>
+        <date-of-birth></date-of-birth>
+        <has-ability-to-sign></has-ability-to-sign>
+    </donor>
+    <attorneys></attorneys>
+    <attorney-decision-instructions>
+        <how-attorneys-make-decisions></how-attorneys-make-decisions>
+        <instructions></instructions>
+    </attorney-decision-instructions>
+    <replacement-attorneys></replacement-attorneys>
+    <replacement-attorney-decision-instructions>
+        <how-attorneys-are-replaced></how-attorneys-are-replaced>
+        <how-attorneys-make-decisions></how-attorneys-make-decisions>
+        <instructions></instructions>
+    </replacement-attorney-decision-instructions>
+    <certificate-providers></certificate-providers>
+    <persons-to-be-notified></persons-to-be-notified>
+    <charges></charges>
+    <guidance></guidance>
+    <restrictions></restrictions>
+    <is-giving-life-sustaining-authority></is-giving-life-sustaining-authority>
+</application>

@@ -1,0 +1,7 @@
+<?php echo '<?xml version="1.0" encoding="UTF-8"?>'; ?>
+<error>
+    <code><?php echo htmlspecialchars($this->code) ?></code>
+    <?php if (isset($this->message)) { ?>
+        <message><?php echo htmlspecialchars($this->message) ?></message>
+    <?php } ?>
+</error>

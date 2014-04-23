@@ -1,0 +1,18 @@
+<phpunit
+    backupGlobals="false"
+    backupStaticAttributes="false"
+    bootstrap="Bootstrap.php"
+    colors="false"
+    strict="false"
+    syntaxCheck="false"
+    verbose="true">
+    <testsuite name="Opg">
+        <directory>./../module/Opg/tests/Integration</directory>
+        <directory>./../module/Opg/tests/Unit</directory>
+    </testsuite>
+    <filter>
+        <whitelist addUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">./../module/Opg/src</directory>
+        </whitelist>
+    </filter>
+</phpunit>

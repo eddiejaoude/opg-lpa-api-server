@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<registration>
+    <applicants>
+        <attorney>
+            <title>Mr</title>
+            <name>
+                <forename>Attorney</forename>
+                <middlenames></middlenames>
+                <surname>General</surname>
+            </name>
+            <email-address>attorney@general.example.com</email-address>
+            <postal-address>
+                <address-line-1>456 Any Street</address-line-1>
+                <address-line-2></address-line-2>
+                <address-line-3></address-line-3>
+                <town>Any Town</town>
+                <county>Any County</county>
+                <postcode>ANY 456</postcode>
+                <country>UK</country>
+            </postal-address>
+            <phone-number>01234567890</phone-number>
+            <donor-relationship>Luke ... I am your father</donor-relationship>
+            <date-of-birth>1950-01-02</date-of-birth>
+            <is-bankrupt-or-subject-to-debt-relief-order>yes</is-bankrupt-or-subject-to-debt-relief-order>
+            <company-name>Galactic Empire</company-name>
+            <occupation>Dark Lord of the Sith</occupation>
+            <dx-address>
+                <dx-number>1</dx-number>
+                <dx-exchange>Death Star</dx-exchange>
+            </dx-address>
+        </attorney>
+        <donor>
+            <title>Mr</title>
+            <name>
+                <forename>Donor</forename>
+                <middlenames></middlenames>
+                <surname>Kebab</surname>
+            </name>
+            <email-address>donor@kebab.example.com</email-address>
+            <postal-address>
+                <address-line-1>123 Any Street</address-line-1>
+                <address-line-2></address-line-2>
+                <address-line-3></address-line-3>
+                <town>Any Town</town>
+                <county>Any County</county>
+                <postcode>ANY 123</postcode>
+                <country>UK</country>
+            </postal-address>
+            <phone-number>01234567890</phone-number>
+            <alias>Bob</alias>
+            <date-of-birth>1950-01-01</date-of-birth>
+            <has-ability-to-sign>yes</has-ability-to-sign>
+        </donor>
+    </applicants>
+    <donor-declaration>
+        <donor>
+            <title>Mr</title>
+            <name>
+                <forename>Donor</forename>
+                <middlenames></middlenames>
+                <surname>Kebab</surname>
+            </name>
+            <email-address>donor@kebab.example.com</email-address>
+            <postal-address>
+                <address-line-1>123 Any Street</address-line-1>
+                <address-line-2></address-line-2>
+                <address-line-3></address-line-3>
+                <town>Any Town</town>
+                <county>Any County</county>
+                <postcode>ANY 123</postcode>
+                <country>UK</country>
+            </postal-address>
+            <phone-number>01234567890</phone-number>
+            <alias>Bob</alias>
+            <date-of-birth>1950-01-01</date-of-birth>
+            <has-ability-to-sign>yes</has-ability-to-sign>
+        </donor>
+        <date-signed></date-signed>
+    </donor-declaration>
+    <attorney-declarations>
+        <trust-corporation-declaration>
+            <trust-corporation>
+                <company-name></company-name>
+                <company-number></company-number>
+                <authorised-person-name>
+                    <forename></forename>
+                    <middlenames></middlenames>
+                    <surname></surname>
+                </authorised-person-name>
+                <postal-address>
+                    <address-line-1></address-line-1>
+                    <address-line-2></address-line-2>
+                    <address-line-3></address-line-3>
+                    <town></town>
+                    <county></county>
+                    <postcode></postcode>
+                    <country></country>
+                </postal-address>
+                <dx-address>
+                    <dx-number></dx-number>
+                    <dx-exchange></dx-exchange>
+                </dx-address>
+            </trust-corporation>
+            <date-signed></date-signed>
+        </trust-corporation-declaration>
+    </attorney-declarations>
+    <certificate-provider-declarations></certificate-provider-declarations>
+    <notifications></notifications>
+    <correspondent>
+        <title></title>
+        <name>
+            <forename></forename>
+            <middlenames></middlenames>
+            <surname></surname>
+        </name>
+        <email-address></email-address>
+        <postal-address>
+            <address-line-1></address-line-1>
+            <address-line-2></address-line-2>
+            <address-line-3></address-line-3>
+            <town></town>
+            <county></county>
+            <postcode></postcode>
+            <country></country>
+        </postal-address>
+        <phone-number></phone-number>
+        <company-name></company-name>
+        <company-reference></company-reference>
+        <dx-address>
+            <dx-number></dx-number>
+            <dx-exchange></dx-exchange>
+        </dx-address>
+    </correspondent>
+    <donor-discount-claim>
+        <is-applying-for-discount></is-applying-for-discount>
+        <is-damage-award-recipient></is-damage-award-recipient>
+        <is-earning-low-income></is-earning-low-income>
+        <is-receiving-benefits></is-receiving-benefits>
+    </donor-discount-claim>
+    <payment-instructions>
+        <payment-method></payment-method>
+        <instructions></instructions>
+    </payment-instructions>
+    <online-payment>
+    	<opg-payment-ref></opg-payment-ref>
+    	<worldpay-ref></worldpay-ref>
+    </online-payment>
+    <payment-result></payment-result>
+    <previous-donor-application>
+        <has-applied-previously></has-applied-previously>
+        <previous-application-details></previous-application-details>
+    </previous-donor-application>
+    <additional-information></additional-information>
+</registration>

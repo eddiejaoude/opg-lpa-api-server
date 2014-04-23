@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:include schemaLocation="Elements.xsd"/>
+
+    <xs:complexType name="health-welfare-registration">
+        <xs:all>
+            <xs:element name="applicants" type="applicant-collection"/>
+            <xs:element name="donor-declaration" type="donor-declaration"/>
+            <xs:element name="attorney-declarations" type="attorney-declaration-collection"/>
+            <xs:element name="certificate-provider-declarations" type="certificate-provider-declaration-collection"/>
+            <xs:element name="notifications" type="notification-collection"/>
+            <xs:element name="correspondent" type="correspondent"/>
+            <xs:element name="donor-discount-claim" type="donor-discount-claim"/>
+            <xs:element name="payment-instructions" type="payment-instructions"/>
+            <xs:element name="online-payment" type="online-payment"/>
+            <xs:element name="payment-result" type="xs:string"/>
+            <xs:element name="previous-donor-application" type="previous-donor-application"/>
+            <xs:element name="additional-information" type="xs:string"/>
+            <xs:element name="life-sustaining-authority-declaration" type="donor-declaration"/>
+        </xs:all>
+    </xs:complexType>
+
+    <xs:element name="registration" type="health-welfare-registration"/>
+
+</xs:schema>

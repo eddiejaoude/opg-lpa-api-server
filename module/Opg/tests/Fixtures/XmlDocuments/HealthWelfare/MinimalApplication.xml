@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<application>
+    <donor>
+        <title>Mr</title>
+        <name>
+            <forename>Donor</forename>
+            <middlenames>Mid</middlenames>
+            <surname>Kebab</surname>
+        </name>
+        <email-address>donor@kebab.example.com</email-address>
+        <postal-address>
+            <address-line-1>123 Any Street</address-line-1>
+            <address-line-2></address-line-2>
+            <address-line-3></address-line-3>
+            <town>Any Town</town>
+            <county>Any County</county>
+            <postcode>ANY 123</postcode>
+            <country>UK</country>
+        </postal-address>
+        <phone-number>01234567890</phone-number>
+        <alias>Bob</alias>
+        <date-of-birth>1950-01-01</date-of-birth>
+        <has-ability-to-sign>yes</has-ability-to-sign>
+    </donor>
+    <attorneys>
+        <attorney>
+            <title>Mr</title>
+            <name>
+                <forename>Attorney</forename>
+                <middlenames></middlenames>
+                <surname>General</surname>
+            </name>
+            <email-address>attorney@general.example.com</email-address>
+            <postal-address>
+                <address-line-1>456 Any Street</address-line-1>
+                <address-line-2></address-line-2>
+                <address-line-3></address-line-3>
+                <town>Any Town</town>
+                <county>Any County</county>
+                <postcode>ANY 456</postcode>
+                <country>UK</country>
+            </postal-address>
+            <phone-number>01234567890</phone-number>
+            <donor-relationship>Luke ... I am your father</donor-relationship>
+            <date-of-birth>1950-01-02</date-of-birth>
+            <is-bankrupt-or-subject-to-debt-relief-order>yes</is-bankrupt-or-subject-to-debt-relief-order>
+            <company-name>Galactic Empire</company-name>
+            <occupation>Dark Lord of the Sith</occupation>
+            <dx-address>
+                <dx-number>1</dx-number>
+                <dx-exchange>Death Star</dx-exchange>
+            </dx-address>
+        </attorney>
+        <attorney>
+            <title>Mr</title>
+            <name>
+                <forename>Legal</forename>
+                <middlenames></middlenames>
+                <surname>General</surname>
+            </name>
+            <email-address>legal@general.example.com</email-address>
+            <postal-address>
+                <address-line-1>789 Any Street</address-line-1>
+                <address-line-2></address-line-2>
+                <address-line-3></address-line-3>
+                <town>Any Town</town>
+                <county>Any County</county>
+                <postcode>ANY 789</postcode>
+                <country>UK</country>
+            </postal-address>
+            <phone-number>01234567890</phone-number>
+            <donor-relationship>Badger</donor-relationship>
+            <date-of-birth>1950-01-03</date-of-birth>
+            <is-bankrupt-or-subject-to-debt-relief-order>no</is-bankrupt-or-subject-to-debt-relief-order>
+            <company-name>Legal &amp; General</company-name>
+            <occupation>Insurance Salesman</occupation>
+            <dx-address>
+                <dx-number></dx-number>
+                <dx-exchange></dx-exchange>
+            </dx-address>
+        </attorney>
+    </attorneys>
+    <attorney-decision-instructions>
+        <how-attorneys-make-decisions></how-attorneys-make-decisions>
+        <instructions></instructions>
+    </attorney-decision-instructions>
+    <replacement-attorneys>
+        <attorney>
+            <title>Mrs</title>
+            <name>
+                <forename>X</forename>
+                <middlenames></middlenames>
+                <surname>Factor</surname>
+            </name>
+            <email-address>x@factor.example.com</email-address>
+            <postal-address>
+                <address-line-1>999 Any Street</address-line-1>
+                <address-line-2></address-line-2>
+                <address-line-3></address-line-3>
+                <town>Any Town</town>
+                <county>Any County</county>
+                <postcode>ANY 999</postcode>
+                <country>UK</country>
+            </postal-address>
+            <phone-number>01234567890</phone-number>
+            <donor-relationship>Moose</donor-relationship>
+            <date-of-birth>1950-01-04</date-of-birth>
+            <is-bankrupt-or-subject-to-debt-relief-order>no</is-bankrupt-or-subject-to-debt-relief-order>
+            <company-name></company-name>
+            <occupation></occupation>
+            <dx-address>
+                <dx-number></dx-number>
+                <dx-exchange></dx-exchange>
+            </dx-address>
+        </attorney>
+    </replacement-attorneys>
+    <replacement-attorney-decision-instructions>
+        <how-attorneys-are-replaced></how-attorneys-are-replaced>
+        <how-attorneys-make-decisions></how-attorneys-make-decisions>
+        <instructions></instructions>
+    </replacement-attorney-decision-instructions>
+    <certificate-providers>
+        <certificate-provider>
+            <title>Mr</title>
+            <name>
+                <forename>Certificate</forename>
+                <middlenames></middlenames>
+                <surname>Provider</surname>
+            </name>
+            <email-address>certificate@provider.example.com</email-address>
+            <postal-address>
+                <address-line-1>1 Any Street</address-line-1>
+                <address-line-2></address-line-2>
+                <address-line-3></address-line-3>
+                <town>Any Town</town>
+                <county>Any County</county>
+                <postcode>ANY 1</postcode>
+                <country>UK</country>
+            </postal-address>
+            <qualification>
+                <qualification></qualification>
+                <qualification-details></qualification-details>
+            </qualification>
+        </certificate-provider>
+    </certificate-providers>
+    <persons-to-be-notified>
+        <notified-person>
+            <title>Mr</title>
+            <name>
+                <forename>Notified</forename>
+                <middlenames></middlenames>
+                <surname>Person</surname>
+            </name>
+            <email-address>notified@person.example.com</email-address>
+            <postal-address>
+                <address-line-1>Any Street</address-line-1>
+                <address-line-2></address-line-2>
+                <address-line-3></address-line-3>
+                <town>Any Town</town>
+                <county>Any County</county>
+                <postcode>ANY</postcode>
+                <country>Australia</country>
+            </postal-address>
+            <phone-number>07817 123456</phone-number>
+        </notified-person>
+    </persons-to-be-notified>
+    <charges>10 million dollars</charges>
+    <guidance></guidance>
+    <restrictions>Only in the event I become a Zombie.</restrictions>
+    <is-giving-life-sustaining-authority>no</is-giving-life-sustaining-authority>
+</application>

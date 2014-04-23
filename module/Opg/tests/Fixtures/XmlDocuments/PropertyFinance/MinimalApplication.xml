@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<application>
+    <donor>
+        <title>Mr</title>
+        <name>
+            <forename>Donor</forename>
+            <middlenames></middlenames>
+            <surname>Kebab</surname>
+        </name>
+        <email-address>donor@kebab.example.com</email-address>
+        <postal-address>
+            <address-line-1>123 Any Street</address-line-1>
+            <address-line-2></address-line-2>
+            <address-line-3></address-line-3>
+            <town>Any Town</town>
+            <county>Any County</county>
+            <postcode>ANY 123</postcode>
+            <country>UK</country>
+        </postal-address>
+        <phone-number>01234567890</phone-number>
+        <alias>Bob</alias>
+        <date-of-birth>1950-01-01</date-of-birth>
+        <has-ability-to-sign>yes</has-ability-to-sign>
+    </donor>
+    <attorneys></attorneys>
+    <attorney-decision-instructions>
+        <how-attorneys-make-decisions></how-attorneys-make-decisions>
+        <instructions></instructions>
+    </attorney-decision-instructions>
+    <replacement-attorneys></replacement-attorneys>
+    <replacement-attorney-decision-instructions>
+        <how-attorneys-are-replaced></how-attorneys-are-replaced>
+        <how-attorneys-make-decisions></how-attorneys-make-decisions>
+        <instructions></instructions>
+    </replacement-attorney-decision-instructions>
+    <certificate-providers></certificate-providers>
+    <persons-to-be-notified></persons-to-be-notified>
+    <charges>1 billion dollars</charges>
+    <guidance></guidance>
+    <restrictions>Only in the event I become a Zombie.</restrictions>
+    <when-to-start-instruction>DonorLostCapacity</when-to-start-instruction>
+</application>

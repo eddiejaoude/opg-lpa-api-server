@@ -1,0 +1,22 @@
+{
+	"name" : "opg-lpa-application-server",
+	"description" : "OPG LPA Application Server",
+	"keywords" : [],
+	"require" : {
+		"php" : ">=5.4",
+		"zendframework/zendframework" : "=2.1.4",
+		"raven/raven": ">=0.2.0",
+		"openlss/lib-array2xml": "dev-master"
+	},
+	"require-dev" : {
+		"behat/mink-selenium2-driver" : "*",
+		"guzzle/guzzle" : "3.0.*",
+		"behat/behat" : "2.4.*@stable",
+		"behat/mink" : "1.4.*@stable",
+		"behat/mink-extension" : "*",
+		"behat/mink-goutte-driver" : "*"
+	},
+	"config" : {
+		"bin-dir" : "bin/"
+	}
+}
