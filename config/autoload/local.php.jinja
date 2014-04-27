@@ -17,35 +17,28 @@ return array(
             'Opg\Infrastructure\MongoConnectionProvider' => array(
                 'parameters' => array(
                     /* leave blank if not using replica sets */
-                    'replicaSetName'     => {% if pillar.mongodb.rs %}'{{pillar.mongodb.rs}}'{% else %}''{% endif %},
+                    'replicaSetName'     => '',
                     /* replica sets - hosts and corresponding ports in arrays */
-                    'dataSourceHostArray' => array(
-                        {%- for server, port in pillar.mongodb.databases[appslug]['servers'].iteritems() -%}
-                            '{{server}}'{% if not loop.last %},{% endif %}
-                        {%- endfor -%}),
-                    'dataSourcePortArray' => array(
-                        {%- for server, port in pillar.mongodb.databases[appslug]['servers'].iteritems() -%}
-                            '{{port}}'{% if not loop.last %},{% endif %}
-                        {%- endfor -%}),
-                    'dataSourceUsername'  => '{{pillar.mongodb.databases[appslug]['user']}}',
-                    'dataSourcePassword'  => '{{pillar.mongodb.databases[appslug]['password']}}',
-                    'dataSourceDatabase'  => '{{pillar.mongodb.databases[appslug]['dbname']}}',
+                    'dataSourceHostArray' => array(),
+                    'dataSourcePortArray' => array(),
+                    'dataSourceUsername'  => '',
+                    'dataSourcePassword'  => '',
+                    'dataSourceDatabase'  => '',
                     'connectTimeoutMillis' => 1000,
                     'maxConnectAttempts' => 30,
                 ),
             ),
             'Opg\Infrastructure\SentryLog' => array(
                 'parameters' => array(
-                    'sentryUri'     => '{{pillar['opg-lpa']['sentry']['api-uri']}}',
+                    'sentryUri'     => '',
                 ),
             ),
         ),
     ),
-    'authenticationServerBaseUri' => '{{pillar['opg-lpa']['opg-lpa-auth']['uri']}}',
-    'authenticationServerHttpTimeoutSeconds' => {{pillar['rest-timeout']}},
-    'worldpayTokenSecret' => "{{pillar['payment']['worldpay']['api_token_secret']}}",
+    'authenticationServerBaseUri' => '',
+    'authenticationServerHttpTimeoutSeconds' => '',
     'log' => array(
-        'path' => '{{pillar.apps['opg-lpa-api']['log-dir']}}'
+        'path' => '',
     ),
 );
 
