@@ -1,5 +1,4 @@
-Office of the Public Guardian - Lasting Power of Attorney
-=====================================
+# OPG LPA API v 1.0.1
 
 The MIT License (MIT)
 
