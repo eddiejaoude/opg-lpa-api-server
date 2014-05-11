@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/ministryofjustice/opg-lpa-api-server.svg)](https://travis-ci.org/ministryofjustice/opg-lpa-api-server)
+
+---
 # OPG LPA API v 1.0.1
 
 Moved `LICENSE` to `LICENSE` file.
