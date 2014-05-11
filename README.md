@@ -40,10 +40,22 @@ data
 data/cache
 ```
 
-### To run unit tests
+### To run all tests
 
 ```
 vendor/phpunit/phpunit/phpunit -c tests/phpunit.xml
+```
+
+#### Unit tests only
+
+```
+vendor/phpunit/phpunit/phpunit -c tests/phpunit.xml module/Opg/tests/Unit/
+```
+
+#### Integration tests only
+
+```
+vendor/phpunit/phpunit/phpunit -c tests/phpunit.xml module/Opg/tests/Integration/
 ```
 
 ## TODO
