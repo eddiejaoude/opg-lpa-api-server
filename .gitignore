@@ -2,5 +2,4 @@
 .settings/
 .buildpath
 .idea/
-vendor/
 bin/
