@@ -2,8 +2,7 @@
 
 Moved `LICENSE` to `LICENSE` file.
 
-Application Server (aka the API)
---------------------------------
+## Application Server (aka the API)
 
 The Application Server is written in PHP 5.4 using [Zend Framework 2](http://framework.zend.com/).
 
@@ -11,10 +10,9 @@ It exposes a RESTful API with endpoints for retrieving, storing and submitting A
 
 Within the larger LPA front office system the Application Server is the point of authority for validation and workflow processing.
 
-How to setup a development environment
---------------------------------------
+## How to setup a development environment
 
-Requirements:
+### Requirements:
 PHP 5.4+ with PDO support for MySQL, SQLite and MongoDB
 
 Create the following files:
@@ -29,7 +27,7 @@ Templates are available:
 config/autoload/local.php.jinja
 ```
 
-Run the following from the application's root directory:
+### Run the following from the application's root directory:
 
 ```
 php composer.phar install --dev
@@ -40,4 +38,10 @@ Give your webserver appropriate permissions to write into the following director
 ```
 data
 data/cache
+```
+
+### To run unit tests
+
+```
+vendor/phpunit/phpunit/phpunit -c tests/phpunit.xml
 ```
