@@ -45,3 +45,12 @@ data/cache
 ```
 vendor/phpunit/phpunit/phpunit -c tests/phpunit.xml
 ```
+
+## TODO
+
+- [x] Removed `vendor` directory
+- [x] Moved `LICENSE` to its own file
+- [ ] Moved best practices config files (i.e. `phpcs.xml`) to `test` directory
+- [ ] Moved `bin` directory from root of project to default location (vendor)
+- [ ] Separate Automated Tests from Unit / Integration
+- [ ] Add Unit Tests to Travis CI
