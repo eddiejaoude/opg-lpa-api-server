@@ -63,9 +63,10 @@ vendor/phpunit/phpunit/phpunit -c tests/phpunit.xml module/Opg/tests/Integration
 
 ## TODO
 
-- [x] Removed `vendor` directory
+- [x] Removed `vendor` directory *(production dependencies re-added as requested)*
 - [x] Moved `LICENSE` to its own file
 - [ ] Moved best practices config files (i.e. `phpcs.xml`) to `test` directory
 - [ ] Moved `bin` directory from root of project to default location (vendor)
-- [ ] Separate Automated Tests from Unit / Integration
-- [ ] Add Unit Tests to Travis CI
+- [x] Add Unit Tests to Travis CI
+- [ ] Add Integration/Smoke Tests to Travis CI
+- [ ] Coveralls support for CodeCoverage from TravisCI
