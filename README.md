@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/ministryofjustice/opg-lpa-api-server.svg)](https://travis-ci.org/ministryofjustice/opg-lpa-api-server)
+[![Build Status](https://travis-ci.org/ministryofjustice/opg-lpa-api-server.svg?branch=master)](https://travis-ci.org/ministryofjustice/opg-lpa-api-server)
 
 ---
 # OPG LPA API v 1.0.1
